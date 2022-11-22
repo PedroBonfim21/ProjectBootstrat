@@ -106,7 +106,7 @@
 .carousel-indicators [data-bs-target] {
   background-color: #222;
   opacity: 0.8;
-  
+
 }
 
 .carousel-indicators .active {
@@ -116,26 +116,38 @@
 #mini-banners {
     margin-bottom: 4em;
   }
-  
+
 #mini-banners .card {
     padding: 2em 0.3em;
     border-radius: 0;
     margin-bottom: 1em;
     margin-top:1em;
 }
-  
+
 #mini-banners i {
     font-size: 2em;
 }
-  
+
 #mini-banners .card-title {
     margin-bottom: 1em;
 }
-  
+
 #mini-banners .btn {
     margin-top: 1.5em;
     padding: 0.3em 0.5em;
     /*padding: 0.6em 1.2em;*/
+}
+
+@media (min-width: 425px) {
+  .carousel-caption{
+      bottom: 3em;
+  }
+  /*botao slider*/
+  #slider .btn {
+      padding: 0.3em 0.5em;
+      font-size: 0.9em;
+      margin-top: 1em;
+  }
 }
 @media (min-width: 768px) {
   #slider .carousel-caption h5 {
@@ -157,17 +169,6 @@
   }
   .card{
       margin-top: 0;
-  }
-}
-@media (min-width: 425px) {
-  .carousel-caption{
-      bottom: 3em;
-  }
-  /*botao slider*/
-  #slider .btn {
-      padding: 0.3em 0.5em;
-      font-size: 0.9em;
-      margin-top: 1em;
   }
 }
 @media (min-width: 1024px){
@@ -244,12 +245,12 @@ margin-top: 1.5em;
   margin-top: 2em;
 }
 
-#featured-images .col-md-4 {
+#featured-images .hover-title {
   position: relative;
   cursor: pointer;
 }
 
-#featured-images .col-md-4:hover > .banner-content {
+#featured-images .hover-title:hover > .banner-content {
   opacity: 0.8;
 }
 
@@ -313,11 +314,36 @@ margin-top: 1.5em;
   font-size: 3em;
 }
 
-@media (min-width: 768px) {
-  #info-content {
-    padding: 3.5em;
+@media (min-width: 320px){
+    #info-banner-subs{
+      display: none;
+    }
   }
-}
+  @media (min-width: 768px) {
+    #info-content {
+      padding: 3.5em;
+    }
+    #info-banner{
+      display: none;
+    }
+    #info-banner-subs{
+      align-items: center;
+      display: flex;
+    }
+  }
+  @media (min-width: 1024px){
+    #info-banner-subs{
+      margin-bottom: 4em;
+    }
+  }
+  @media (min-width: 1440px){
+    #info-banner-subs{
+      display: none;
+    }
+    #info-banner{
+      display: flex;
+    }
+  }
 
 
 /* FOOTER TOP */
@@ -410,4 +436,3 @@ margin-top: 1.5em;
     padding-left: 2em;
   }
 }
-
